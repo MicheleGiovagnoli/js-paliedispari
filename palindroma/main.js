@@ -30,11 +30,12 @@ function parolaPalindroma (parola){
     console.log(arrayParola);
 
     if (arrayParola == arrayParolaInversa) {
-        console.log("e' palindroma");
+        return("e' palindroma");
     }
     else {
-        console.log("non e' palindroma");
+        return("non e' palindroma");
     }
+
 }
 
 
