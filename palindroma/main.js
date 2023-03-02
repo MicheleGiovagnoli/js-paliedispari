@@ -4,31 +4,37 @@
 
 
 
-const parola = prompt('Digita una parola:');
-const arrayParola = parola;
+const parolaUtente = prompt('Digita una parola:');
 
-let arrayParolaInversa = '';
+parolaPalindroma(parolaUtente);
 
-let prelievoCarattere;
-let contatore = arrayParola.length-1;
 
-while(contatore >= 0) {                          // il ciclo si ripete per ogni lettera che compone la parola
+function parolaPalindroma (parola){
+    const arrayParola = parola;
 
-    prelievoCarattere = arrayParola[contatore];  //Scorro arrayParola, ad ogni ciclo prelevo una lettera e la salvo in prelievoCarattere 
-    console.log(prelievoCarattere);
+    let arrayParolaInversa = '';
 
-    arrayParolaInversa += prelievoCarattere;     //Salvo in arrayParolaInversa le lettera appena presa
+    let prelievoCarattere;
+    let contatore = arrayParola.length-1;
 
-    contatore--                                  //siccome inizio dall'ultima lettera di arrayParola per realizzare una parola inversa, con il contatore "torno indietro"
-}                                                //ripeto il ciclo fin che arrayParolaInversa non contenga tutte le lettere 
-console.log(arrayParolaInversa);
-console.log(arrayParola);
+    while(contatore >= 0) {                          // il ciclo si ripete per ogni lettera che compone la parola
 
-if (arrayParola == arrayParolaInversa) {
-    console.log("e' palindroma");
-}
-else {
-    console.log("non e' palindroma");
+        prelievoCarattere = arrayParola[contatore];  //Scorro arrayParola, ad ogni ciclo prelevo una lettera e la salvo in prelievoCarattere 
+        console.log(prelievoCarattere);
+
+        arrayParolaInversa += prelievoCarattere;     //Salvo in arrayParolaInversa le lettera appena presa
+
+        contatore--                                  //siccome inizio dall'ultima lettera di arrayParola per realizzare una parola inversa, con il contatore "torno indietro"
+    }                                                //ripeto il ciclo fin che arrayParolaInversa non contenga tutte le lettere 
+    console.log(arrayParolaInversa);
+    console.log(arrayParola);
+
+    if (arrayParola == arrayParolaInversa) {
+        console.log("e' palindroma");
+    }
+    else {
+        console.log("non e' palindroma");
+    }
 }
 
 
